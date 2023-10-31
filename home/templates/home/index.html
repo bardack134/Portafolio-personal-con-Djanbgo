@@ -1,4 +1,5 @@
 {% extends "home/base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -6,15 +7,21 @@
 <!-- Contenido -->
 <div class="container mt-4 px-3 ">
     <div class="row">
+        
         <!-- contendor de la foto -->
         <div class="col-sm-12 col-md-4">
             <div style="text-align: center;">
-                <img src="/images/Doraemon.jpg" class="img-fluid">
+                <img src="{% static 'img/doraemon.jpg' %}" class="img-fluid"  alt="">
+
+            
             </div>
             <div class="row text-center py-2">
                 <h1 class="tipoLetra">Hi, i am Ricardo</h1>
             </div>
         </div>
+        
+
+    
 
         <!-- contendor de la informacion personal -->
         <div class="col-sm-12 col-md-8 ">

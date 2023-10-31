@@ -28,3 +28,7 @@ urlpatterns = [
 
      path('', include('home.urls')),
 ]
+# Si el modo DEBUG está activado (entorno de desarrollo), 
+# agrega las URL para servir archivos multimedia (MEDIA_URL)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
