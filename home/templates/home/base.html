@@ -1,3 +1,5 @@
+{% load static %} <!-- Carga de archivos estáticos usando el motor de plantillas de Django -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playpen+Sans:wght@200;300&display=swap"
         rel="stylesheet">
 
+    
+  <!-- Cargar estilos CSS personalizados desde archivos estáticos -->
+  <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
     <title>Bootstrap 5</title>
 </head>
 
@@ -26,7 +32,7 @@
 
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="#"><img src="images/logo.svg" width="30px"></a>
+            <a class="navbar-brand" href="#"><img src="{% static 'img/logo.svg' %}" width="30px"></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -39,11 +45,12 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page"  href="{% url 'Home:home' %}">Home</a>
+ 
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/projects.html">Projects</a>
+                        <a class="nav-link" href="{% url 'Projects:proyectos' %}">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Resume</a>

@@ -17,6 +17,9 @@ urlpatterns = [
     
     # Incluye las URL de la aplicación 'home' usando el archivo urls.py de esa aplicación
     path('', include('home.urls')),
+
+    # Incluye las URL de la aplicación 'Projects' usando el archivo urls.py de esa aplicación
+    path('proyectos', include('projectos.urls')),
 ]
 
 # Configuración para servir archivos estáticos y multimedia durante el desarrollo

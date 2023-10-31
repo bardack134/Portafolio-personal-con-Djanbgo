@@ -1,0 +1,78 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+
+    <!-- PROYECTOS -->
+    <div class="container mt-5 text-center  ">
+        <!-- proyecto1 -->
+        <div class="card d-inline-block mx-1 mb-3 " style="width: 18rem;">
+            <img src="/images/python.jpg" class="card-img-top" style="height: 260px;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a data-bs-toggle="modal" data-bs-target="#detallesModal" class="btn btn-info">View details</a>
+            </div>
+        </div>
+
+        <!-- proyecto 2 -->
+        <div class="card d-inline-block mx-1 mb-3 " style="width: 18rem;">
+            <img src="/images/python.jpg" class="card-img-top" style="height: 260px;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a data-bs-toggle="modal" data-bs-target="#detallesModal" class="btn btn-info">View details</a>
+            </div>
+        </div>
+
+        <!-- proyecto 3 -->
+        <div class="card d-inline-block mx-1 mb-3 " style="width: 18rem;">
+            <img src="/images/python.jpg" class="card-img-top" style="height: 260px;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a data-bs-toggle="modal" data-bs-target="#detallesModal" class="btn btn-info">View details</a>
+            </div>
+        </div>
+
+    
+
+        
+
+        
+
+        
+    </div>
+
+
+    <!-- configuracion de la ventana modal -->
+    <!-- Modal -->
+    <div class="modal fade " id="detallesModal" tabindex="-1" aria-labelledby="detallesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detallesModalLabel">PROJECT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="/images/python.jpg" class="img-fluid" style="height: 200px;">
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero beatae sequi est eum voluptatem accusantium dolorem molestias fugit labore aspernatur ratione magni inventore nulla, explicabo vel? Minima, corporis fugiat! Ipsam voluptatum rem qui, quae atque animi dicta hic laborum fuga quasi natus nobis soluta, distinctio blanditiis dignissimos velit ab quaerat quia, at repellat. Dolor, aliquid exercitationem nam sed cupiditate corrupti asperiores culpa laudantium repellat? Iste placeat voluptatibus doloremque animi debitis corporis perspiciatis corrupti quo dignissimos quibusdam, nemo maxime commodi ratione veniam, dolore quae accusantium? Aliquam, tempore molestiae id aperiam error nemo dicta illo corporis iusto architecto minus, sint magni accusantium! pernatur ratione magni inventore nulla, explicabo vel? Minima, corporis fugiat! Ipsam voluptatum rem qui, quae atque animi dicta hic laborum fuga quasi natus nobis soluta, distinctio blanditiis dignissimos velit ab quaerat quia, at repellat. Dolor, aliquid exercitationem nam sed cupiditate corrupti asperiores culpa laudantium repellat? Iste placeat voluptatibus doloremque animi debitis corporis perspiciatis corrupti quo dignissimos quibusdam, nemo maxime commodi ratione veniam, dolore quae accusantium? Aliquam, tempore molestiae id aperiam error nemo dicta illo corporis iusto architecto minus, sint magni accusantium! pernatur ratione magni inventore nulla, explicabo vel? Minima, corporis fugiat! Ipsam voluptatum rem qui, quae atque animi dicta hic laborum fuga quasi natus nobis soluta, distinctio blanditiis dignissimos velit ab quaerat quia, at repellat. Dolor, aliquid exercitationem nam sed cupiditate corrupti asperiores culpa laudantium repellat? Iste placeat voluptatibus doloremque animi debitis corporis perspiciatis corrupti quo dignissimos quibusdam, nemo maxime commodi ratione veniam, dolore quae accusantium? Aliquam, tempore molestiae id aperiam error nemo dicta illo corporis iusto architecto minus, sint magni accusantium!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+{% endblock %}

@@ -1,0 +1,9 @@
+.fondo{
+    background-image: url(../images/paisaje.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.tipoLetra {
+    font-family: 'Kaushan Script', 'Playpen Sans', cursive;
+}
