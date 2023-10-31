@@ -1,34 +1,25 @@
-"""
-URL configuration for myPortafolioDj project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+# Importa el módulo de administración de Django
 from django.contrib import admin
+
+# Importa funciones y clases relacionadas con las URL de Django
 from django.urls import path, include
 
-# Importa la configuración global de tu proyecto Django
+# Importa la configuración global del proyecto Django desde settings.py
 from django.conf import settings
 
-# Importa la función 'static' para servir archivos estáticos como imágenes y hojas de estilo CSS, para que puedas ver cómo se ven en tu aplicación.
+# Importa la función 'static' para manejar archivos estáticos y multimedia
 from django.conf.urls.static import static
 
+# Lista de patrones de URL del proyecto
 urlpatterns = [
+    # Ruta para acceder al panel de administración de Django
     path('admin/', admin.site.urls),
-
-     path('', include('home.urls')),
+    
+    # Incluye las URL de la aplicación 'home' usando el archivo urls.py de esa aplicación
+    path('', include('home.urls')),
 ]
-# Si el modo DEBUG está activado (entorno de desarrollo), 
-# agrega las URL para servir archivos multimedia (MEDIA_URL)
+
+# Configuración para servir archivos estáticos y multimedia durante el desarrollo
 if settings.DEBUG:
+    # Agrega las URL para servir archivos multimedia (MEDIA_URL) usando la ruta del sistema de archivos especificada en MEDIA_ROOT
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
