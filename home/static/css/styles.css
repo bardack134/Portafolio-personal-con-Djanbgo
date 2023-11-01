@@ -1,5 +1,5 @@
 .fondo{
-    background-image: url(../images/paisaje.jpg);
+    background-image: url("../img/paisaje.jpg");
     height: 100vh;
     background-size: cover;
     background-position: center;
