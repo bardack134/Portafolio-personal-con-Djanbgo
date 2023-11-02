@@ -8,36 +8,39 @@
 
 
     <!-- PROYECTOS -->
-    {% for i in informacion %}
-    <div class="container mt-5 text-center ">
+    
+    <div class="container mt-5 text-center d-flex flex-wrap justify-content-center">
+        {% for i in informacion %}
         <!-- proyecto1 -->
-        <div class="card  mx-1 mb-3 d-flex flex-wrap justify-content-center  " style="width: 18rem;">
+        <div class="card  mx-1 mb-3   " style="width: 18rem;">
             <img src="{{ i.imagen.url }}" class="card-img-top" style="height: 260px;">
             <div class="card-body">
                 <h5 class="card-title">{{ i.titulo }}</h5>
-                <p class="card-text">{{ i.introduccion }}</p>
+                <p class="card-text" style="text-align: justify;">{{ i.introduccion }}</p>
                 <a data-bs-toggle="modal" data-bs-target="#detallesModal" class="btn btn-info">View details</a>
             </div>
         </div>
     
          
 
-        
+        {% endfor %}
     </div>
-    {% endfor %}
+    
 
     <!-- configuracion de la ventana modal -->
     <!-- Modal -->
+    {% for i in informacion %}
     <div class="modal fade " id="detallesModal" tabindex="-1" aria-labelledby="detallesModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="detallesModalLabel">PROJECT</h5>
+                    <h5 class="modal-title" id="detallesModalLabel">{{ i.titulo }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="/images/python.jpg" class="img-fluid" style="height: 200px;">
-                    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero beatae sequi est eum voluptatem accusantium dolorem molestias fugit labore aspernatur ratione magni inventore nulla, explicabo vel? Minima, corporis fugiat! Ipsam voluptatum rem qui, quae atque animi dicta hic laborum fuga quasi natus nobis soluta, distinctio blanditiis dignissimos velit ab quaerat quia, at repellat. Dolor, aliquid exercitationem nam sed cupiditate corrupti asperiores culpa laudantium repellat? Iste placeat voluptatibus doloremque animi debitis corporis perspiciatis corrupti quo dignissimos quibusdam, nemo maxime commodi ratione veniam, dolore quae accusantium? Aliquam, tempore molestiae id aperiam error nemo dicta illo corporis iusto architecto minus, sint magni accusantium! pernatur ratione magni inventore nulla, explicabo vel? Minima, corporis fugiat! Ipsam voluptatum rem qui, quae atque animi dicta hic laborum fuga quasi natus nobis soluta, distinctio blanditiis dignissimos velit ab quaerat quia, at repellat. Dolor, aliquid exercitationem nam sed cupiditate corrupti asperiores culpa laudantium repellat? Iste placeat voluptatibus doloremque animi debitis corporis perspiciatis corrupti quo dignissimos quibusdam, nemo maxime commodi ratione veniam, dolore quae accusantium? Aliquam, tempore molestiae id aperiam error nemo dicta illo corporis iusto architecto minus, sint magni accusantium! pernatur ratione magni inventore nulla, explicabo vel? Minima, corporis fugiat! Ipsam voluptatum rem qui, quae atque animi dicta hic laborum fuga quasi natus nobis soluta, distinctio blanditiis dignissimos velit ab quaerat quia, at repellat. Dolor, aliquid exercitationem nam sed cupiditate corrupti asperiores culpa laudantium repellat? Iste placeat voluptatibus doloremque animi debitis corporis perspiciatis corrupti quo dignissimos quibusdam, nemo maxime commodi ratione veniam, dolore quae accusantium? Aliquam, tempore molestiae id aperiam error nemo dicta illo corporis iusto architecto minus, sint magni accusantium!</p>
+                    <img src="{{ i.imagen.url }}" class="img-fluid" style="height: 200px;">
+                    <p style="text-align: justify;"> i.introduccion </p>
+                    <p style="text-align: justify;">{{ i.introduccion }}</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -46,7 +49,7 @@
             </div>
         </div>
     </div>
-
+    {% endfor %}
    
 
 {% endblock %}
