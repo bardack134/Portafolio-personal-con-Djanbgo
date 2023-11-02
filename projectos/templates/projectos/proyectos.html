@@ -7,53 +7,54 @@
 
 
 
-    <!-- PROYECTOS -->
-    
-    <div class="container mt-5 text-center d-flex flex-wrap justify-content-center">
-        {% for i in informacion %}
-        <!-- proyecto1 -->
-        <div class="card  mx-1 mb-3   " style="width: 18rem;">
-            <img src="{{ i.imagen.url }}" class="card-img-top" style="height: 260px;">
-            <div class="card-body">
-                <h5 class="card-title">{{ i.titulo }}</h5>
-                <p class="card-text" style="text-align: justify;">{{ i.introduccion }}</p>
-                <a data-bs-toggle="modal" data-bs-target="#detallesModal" class="btn btn-info">View details</a>
-            </div>
-        </div>
-    
-         
+<!-- PROYECTOS -->
 
-        {% endfor %}
-    </div>
-    
-
-    <!-- configuracion de la ventana modal -->
-    <!-- Modal -->
+<div class="container mt-5 text-center d-flex flex-wrap justify-content-center">
     {% for i in informacion %}
-    <div class="modal fade " id="detallesModal" tabindex="-1" aria-labelledby="detallesModalLabel" aria-hidden="true">
+    <!-- proyecto1 -->
+    <div class="card  mx-1 mb-3   " style="width: 18rem;">
+        <img src="{{ i.imagen.url }}" class="card-img-top" style="height: 260px;">
+        <div class="card-body">
+            <h5 class="card-title">{{ i.titulo }}</h5>
+            <p class="card-text" style="text-align: justify;">{{ i.introduccion }}</p>
+            <a data-bs-toggle="modal" data-bs-target="#detallesModal{{ i.id }}" class="btn btn-info">View details</a>
+        </div>
+    </div>
+
+    <!-- Ventana modal correspondiente a la tarjeta actual -->
+
+    <div class="modal fade " id="detallesModal{{ i.id }}" tabindex="-1" aria-labelledby="detallesModalLabel{{ i.id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="detallesModalLabel">{{ i.titulo }}</h5>
+                    <h5 class="modal-title" id="detallesModalLabel{{ i.id }}">{{ i.titulo }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
                     <img src="{{ i.imagen.url }}" class="img-fluid" style="height: 200px;">
                     <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> INTRODUCTION </p>
                     <p style="text-align: justify;">{{ i.introduccion }}</p>
-                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> TECHNOLOGIES AND TOOLS </p>
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> TECHNOLOGIES AND TOOLS
+                    </p>
                     <p style="text-align: justify;">{{ i.herramientas }}</p>
-                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> RESULTS AND LEARNINGS </p>
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> RESULTS AND LEARNINGS
+                    </p>
                     <p style="text-align: justify;">{{ i.resultadosLogros }}</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    
+
                 </div>
             </div>
         </div>
     </div>
+
     {% endfor %}
-   
+</div>
+
+
+
+
+
 
 {% endblock %}
