@@ -6,10 +6,11 @@ from .models import InfoProyectos
 class InfoProyectosAdmin(admin.ModelAdmin):
          
 
-     list_display = ('titulo', 'created', 'updated')
+     list_display = ('titulo', 'created', 'updated', 'introduccion')
 
-     list_editable = ('titulo',)
+      
 
+     
      #estos campos habiamos determinado que se actualizarian automaticamente, por lo tanto seran solo Lectura 
      readonly_fields=('created', 'updated')
 

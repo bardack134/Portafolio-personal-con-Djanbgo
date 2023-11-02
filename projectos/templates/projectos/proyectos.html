@@ -8,30 +8,23 @@
 
 
     <!-- PROYECTOS -->
-    <div class="container mt-5 text-center  ">
+    {% for i in informacion %}
+    <div class="container mt-5 text-center ">
         <!-- proyecto1 -->
-        <div class="card d-inline-block mx-1 mb-3 " style="width: 18rem;">
-            <img src="/images/python.jpg" class="card-img-top" style="height: 260px;">
+        <div class="card  mx-1 mb-3 d-flex flex-wrap justify-content-center  " style="width: 18rem;">
+            <img src="{{ i.imagen.url }}" class="card-img-top" style="height: 260px;">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+                <h5 class="card-title">{{ i.titulo }}</h5>
+                <p class="card-text">{{ i.introduccion }}</p>
                 <a data-bs-toggle="modal" data-bs-target="#detallesModal" class="btn btn-info">View details</a>
             </div>
         </div>
-
-        
-        
-
     
-
-        
-
-        
+         
 
         
     </div>
-
+    {% endfor %}
 
     <!-- configuracion de la ventana modal -->
     <!-- Modal -->
