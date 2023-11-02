@@ -39,8 +39,12 @@
                 </div>
                 <div class="modal-body text-center">
                     <img src="{{ i.imagen.url }}" class="img-fluid" style="height: 200px;">
-                    <p style="text-align: justify;"> i.introduccion </p>
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> INTRODUCTION </p>
                     <p style="text-align: justify;">{{ i.introduccion }}</p>
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> TECHNOLOGIES AND TOOLS </p>
+                    <p style="text-align: justify;">{{ i.herramientas }}</p>
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> RESULTS AND LEARNINGS </p>
+                    <p style="text-align: justify;">{{ i.resultadosLogros }}</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
