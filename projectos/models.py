@@ -2,11 +2,13 @@ from django.db import models
 
 # Create your models here.
 class InfoProyectos(models.Model):
-    imagen = models.ImageField(upload_to='proyectos')
+    imagen = models.ImageField(upload_to='proyectos', null=True)
 
     titulo = models.CharField(max_length=100)
 
     github_link = models.URLField(max_length=200)
+    
+    link_proyecto = models.URLField(max_length=200, null=True)
 
     introduccion = models.TextField()
 

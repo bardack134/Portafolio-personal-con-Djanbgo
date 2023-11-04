@@ -12,7 +12,7 @@
 <div class="container mt-5 text-center d-flex flex-wrap justify-content-center">
     {% for i in informacion %}
     <!-- proyecto1 -->
-    <div class="card  mx-1 mb-3   " style="width: 18rem;">
+    <div class="card  mx-1 mb-3   " style="width: 21rem;">
         <img src="{{ i.imagen.url }}" class="card-img-top" style="height: 260px;">
         <div class="card-body">
             <h5 class="card-title">{{ i.titulo }}</h5>
@@ -32,12 +32,24 @@
                 </div>
                 <div class="modal-body text-center">
                     <img src="{{ i.imagen.url }}" class="img-fluid" style="height: 200px;">
+                    <!-- introduccion -->
                     <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> INTRODUCTION </p>
                     <p style="text-align: justify;">{{ i.introduccion }}</p>
-                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> TECHNOLOGIES AND TOOLS
+                    <!-- link github -->
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> LINK GITHUB</p>
+                    <a href="{{ i.github_link }}" style="text-align: justify;">{{ i.github_link }}</a>
+                    
+                    <!-- link del proyecto -->
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase mt-3"> VIEW PROJECT </p>
+                    <a href="{{ i.github_link }}" style="text-align: justify;">{{ i.link_proyecto }}</a>
+                    
+                    <!-- tecnologias usadas -->
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase mt-3"> TECHNOLOGIES AND TOOLS
                     </p>
                     <p style="text-align: justify;">{{ i.herramientas }}</p>
-                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase "> RESULTS AND LEARNINGS
+
+                    <!-- resultados y aprendizaje -->
+                    <p style="text-align: justify; font-weight: bold;" class="text-uppercase mt-3"> RESULTS AND LEARNINGS
                     </p>
                     <p style="text-align: justify;">{{ i.resultadosLogros }}</p>
                 </div>
