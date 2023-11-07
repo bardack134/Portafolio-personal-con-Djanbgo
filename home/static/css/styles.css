@@ -13,3 +13,17 @@
 
 
 }
+/* Esta línea de CSS selecciona todos los elementos con la clase icon que están dentro de elementos con la clase social-icons. En otras palabras, se aplica a elementos <a> con la clase icon que están dentro de un contenedor con la clase social-icons. */
+.social-icons .icon {
+     /* Establece un margen de 10 píxeles a la izquierda y derecha de los elementos con la clase .icon, lo que crea un espacio entre los iconos.
+    margin: 0 10px; */
+    /*  Hace que los elementos con la clase .icon se comporten como bloques en línea, lo que significa que estarán en la misma línea horizontal y se ajustarán según el contenido. */
+    display: inline-block;
+    /*  Aplica una transición con una duración de 0.3 segundos y una función de tiempo de ease al efecto de transformación que se aplicará a los elementos .icon cuando cambie su estado. */
+    transition: transform 0.3s ease;
+}
+/*  Esta línea de CSS se aplica cuando el mouse está sobre los elementos .icon dentro de .social-icons. */
+.social-icons .icon:hover {
+    /* Cuando el mouse está sobre los elementos .icon, los elementos se moverán hacia arriba en 5 píxeles (translateY(-5px)) debido al efecto de transformación. Esto crea un efecto visual de elevación cuando pasas el mouse sobre los iconos. */
+    transform: translateY(-5px);
+}
