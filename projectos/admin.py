@@ -1,18 +1,9 @@
 from django.contrib import admin
+from .models import InfoProyectos2
 
-from .models import InfoProyectos
-# Register your models here.
+class InfoProyectos2Admin(admin.ModelAdmin):
+    list_display = ('titulo', 'created', 'updated', 'introduccion')
+    readonly_fields = ('created', 'updated')
 
-class InfoProyectosAdmin(admin.ModelAdmin):
-         
+admin.site.register(InfoProyectos2, InfoProyectos2Admin)
 
-     list_display = ('titulo', 'created', 'updated', 'introduccion')
-
-      
-
-     
-     #estos campos habiamos determinado que se actualizarian automaticamente, por lo tanto seran solo Lectura 
-     readonly_fields=('created', 'updated')
-
-
-admin.site.register(InfoProyectos, InfoProyectosAdmin)
